@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Big Shoulders Display";
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 320px;
+    border-radius: 10px;
+    margin-top: 300px;
+
+    & .card {
+        padding: 40px;
+
+        & img {
+            width: 50px;
+        }
+
+        & h1 {
+            margin: 20px 0;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            color: var(--Very-light-gray);
+            font-weight: 700;
+        }
+
+        & p {
+            font-size: 1em;
+            color: var(--Transparent-white);
+            font-family: 'Lexend Deca';
+            font-weight: 400;
+        }
+
+        & button {
+            padding: 10px 20px;
+            margin: 20px 0 10px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            border: 1px solid var(--Transparent-white);
+        }
+    }
+
+    & .card-sedans {
+        background-color: var(--Bright-orange);
+
+        & button {
+            color: var(--Bright-orange);
+
+            &:hover {
+                background-color: var(--Bright-orange);
+                color: var(--Transparent-white);
+            }
+        }
+    }
+
+    & .card-suvs {
+        background-color: var(--Dark-cyan);
+
+        & button {
+            color: var(--Dark-cyan);
+
+            &:hover {
+                background-color: var(--Dark-cyan);
+                color: var(--Transparent-white);
+            }
+        }
+    }
+
+    & .card-luxury {
+        background-color: var(--Very-dark-cyan);
+
+        & button {
+            color: var(--Very-dark-cyan);
+
+            &:hover {
+                background-color: var(--Very-dark-cyan);
+                color: var(--Transparent-white);
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    margin:20px 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:767px){
+    .container{
+        margin-top: 0;
+        display: flex;
+        width: 700px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 900px;
+        & .card{
+            & button{
+                margin-top: 80px;
+            }
+        }
+    }
+}
